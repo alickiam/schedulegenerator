@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            Schedule Generator!
+        </title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+<body>
+  <div class="jumbotron">
+    <h1 class="display-4">Schedule Generator</h1>
+      <td><a href="/createSchedule/" class="btn" role="button">Create Schedule</a></td>
+      <hr class="my-4">
+      <h1 class="display-4">Current Schedules</h1>
+      {% for schedule in schedules %}
+      <td><a href="/viewSchedule/{{schedule[0]}}" class="btn" role="button">View {{schedule[0]}}</a></td>
+      {% endfor %}
+
+  </div>
+</body>
